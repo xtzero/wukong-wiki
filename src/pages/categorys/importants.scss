@@ -1,0 +1,118 @@
+.importants-container {
+    .rubys-list {
+        width: 100%;
+        top: 90rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        background-color: #121211;
+        z-index: 10;
+        padding-bottom: 50rpx;
+
+        .rubys-item {
+            width: 80%;
+            min-height: 200rpx;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            background-color: #fff;
+            margin-bottom: 20rpx;
+            padding: 30rpx 20rpx;
+            border-radius: 30rpx;
+
+            .ruby-left {
+                width: 20%;
+                display: flex;
+                flex-direction: row;
+                .ruby-item-image {
+                    width: 20vw;
+                    height: 200rpx;
+                }
+            }
+            .ruby-right {
+                width: 80%;
+                height: 100%;
+                margin: 0 40rpx;
+
+                .ruby-name {
+                    font-size: larger;
+                    color: #131312;
+                    
+                    .name {
+                        font-family: 'yunfeng';
+                    }
+                    .level {
+                        font-size: small;
+                    }
+                }
+                .ruby-text {
+                    color: gray;
+                    font-size: smaller;
+                    margin-top: 20rpx;
+                }
+            }
+        }
+    }
+    .dialog {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 12;
+
+        .dialog-inner {
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            left: 10%;
+            top: 10%;
+            background-color: #fff;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: #7e6531;
+            border-radius: 20rpx;
+            display: flex;
+            flex-direction: column;
+
+            .close-btn {
+                position: fixed;
+                height: 30rpx;
+                top: 13%;
+                right: 13%;
+                font-size: xx-large;
+            }
+            
+            .title {
+                margin-top: 20%;
+                font-size: xx-large;
+                text-align: center;
+                font-family: 'yunfeng';
+            }
+            .dialog-img {
+                width: 60vw;
+                height: 60vw;
+                flex-shrink: 0;
+                margin-top: 30rpx;
+                margin-left: 10vw;
+            }
+            .content {
+                margin-top: 50rpx;
+                flex-grow: 1;
+                width: 80%;
+                margin-left: 10%;
+                font-size: small;
+            }
+            .originUrl {
+                width: calc(100% - 100rpx);
+                margin: 50rpx 40rpx 100rpx 40rpx;
+                text-wrap: wrap;
+                color: gray;
+                font-size: xx-small;
+            }
+        }
+    }
+}

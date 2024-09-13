@@ -1,0 +1,132 @@
+.wine-container {
+    .nav {
+        width: 100%;
+        height: 100rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        color: #d7d7d7;
+        position: fixed;
+        left: 0;
+        top: 0;
+        z-index: 11;
+        background-color: #121211;
+
+        .nav-item {
+            font-family: 'yunfeng';
+            font-weight: 100;
+            font-size: smaller;
+        }
+    }
+    .nav-floatbar {
+        width: 100%;
+        position: fixed;
+        top: 0;
+        z-index: 11;
+        background-color: #121211;
+
+
+        .nav-floatbar-inner {
+            position: absolute;
+            top: 0;
+            width: 33%;
+            height: 10rpx;
+            transition: ease-out 0.4s left;
+
+            .nav-floatbar-inner-point {
+                width: 10rpx;
+                height: 10rpx;
+                border-radius: 50%;
+                margin-left: calc(50%);
+                background-color: #d7d7d7;
+            }
+        }
+    }
+    .namebook-list {
+        width: 100%;
+        top: 90rpx;
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+        flex-wrap: wrap;
+        position: absolute;
+        background-color: #121211;
+        z-index: 10;
+        padding-bottom: 100rpx;
+
+        .namebook-item {
+            width: 45%;
+
+            &:nth-of-type(odd) {
+                
+            }
+            .namebook-item-image {
+                width: 100%;
+            }
+            .item-name {
+                text-align: center;
+                font-family: 'yunfeng';
+            }
+        }
+    }
+    .dialog {
+        position: fixed;
+        width: 100vw;
+        height: 100vh;
+        top: 0;
+        left: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        z-index: 12;
+
+        .dialog-inner {
+            position: fixed;
+            width: 80%;
+            height: 80%;
+            left: 10%;
+            top: 10%;
+            background-color: #fff;
+            overflow-x: hidden;
+            overflow-y: auto;
+            color: #7e6531;
+            border-radius: 20rpx;
+            display: flex;
+            flex-direction: column;
+
+            .close-btn {
+                position: fixed;
+                height: 30rpx;
+                top: 13%;
+                right: 13%;
+                font-size: xx-large;
+            }
+            
+            .title {
+                margin-top: 20%;
+                font-size: xx-large;
+                text-align: center;
+                font-family: 'yunfeng';
+            }
+            .dialog-img {
+                width: 60vw;
+                height: 60vw;
+                flex-shrink: 0;
+                margin-top: 30rpx;
+                margin-left: 10vw;
+            }
+            .content {
+                margin-top: 50rpx;
+                flex-grow: 1;
+                width: 80%;
+                margin-left: 10%;
+                font-size: small;
+            }
+            .originUrl {
+                width: calc(100% - 100rpx);
+                margin: 50rpx 40rpx 100rpx 40rpx;
+                text-wrap: wrap;
+                color: gray;
+                font-size: xx-small;
+            }
+        }
+    }
+}

@@ -1,0 +1,104 @@
+
+.index-container {
+    width: 100vw;
+    height: 100vh;
+    background-color: #111110;
+    overflow-x: hidden;
+    overflow-y: scroll;
+    color: #c6c6c6;
+
+    .title-row {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        width: 100vw;
+        padding-left: 60rpx;
+        position: fixed;
+        z-index: 99;
+        background-color: rgb(18, 18, 17);
+        top: 0;
+        left: 0;
+        padding-bottom: 20rpx;
+
+        .more-icon {
+            width: 60rpx;
+            height: 60rpx;
+            z-index: 100;
+        }
+        .title {
+            height: 100rpx;
+            margin-left: -100rpx;
+            clip-path: inset(0 54% 0 0);
+            z-index: 99;
+        }
+        .nav-text {
+            position: absolute;
+            color: #d7d7d7;
+            font-size: medium;
+            font-weight: 500;
+        }
+    }
+
+    .list {
+        z-index: 98;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50rpx;
+        transition: all ease-in 0.3s;
+        // margin-left: 0;
+        position: fixed;
+        top: -20rpx;
+        left: 0;
+        width: 100%;
+        height: 90vh;
+        background-color: #111110;
+        overflow-y: auto;
+
+        &.list-hide {
+            left: -100vw;
+        }
+
+        .list-item {
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            width: 100%;
+            height: 150rpx;
+            flex-shrink: 0;
+            justify-content: space-between;
+            &:not(:last-of-type) {
+                border-bottom: solid 1px rgba($color: #897038, $alpha: 0.5);
+            }
+            &.active {
+                background-color: #d7d7d7;
+            }
+
+            .list-title {
+                margin-left: 50rpx;
+                color: #897038;
+                font-size: larger;
+                font-weight: 400;
+                font-family: 'yunfeng';
+            }
+            .list-arrow {
+                margin-right: 50rpx;
+                color: #897038;
+                width: 60rpx;
+                height: 60rpx;
+            }
+        }
+    }
+    .content-container {
+        z-index: 97;
+        display: flex;
+        flex-direction: column;
+        padding-bottom: 50rpx;
+        transition: all ease-in 0.3s;
+        position: absolute;
+        left: 0;
+        width: 100%;
+        min-height: 100vh;
+        background-color: #111110;
+        color: white;
+    }
+}
